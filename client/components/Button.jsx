@@ -5,10 +5,19 @@ class Button extends React.Component {
     super(props);
     this.state = { counter: 1 };
   }
+
+  handleClick () {
+    this.setState({
+      counter: this.state.counter +1
+})
+}
+
   render() {
     return (
-      <button>{this.state.counter}</button>
-    );
+      <button onClick={this.handleClick}>
+       {this.state.counter}
+     </button>
+    )
   }
 }
 

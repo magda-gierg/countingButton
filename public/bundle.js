@@ -1051,11 +1051,18 @@ var Button = function (_React$Component) {
   }
 
   _createClass(Button, [{
+    key: 'handleClick',
+    value: function handleClick() {
+      this.setState({
+        counter: this.state.counter + 1
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'button',
-        null,
+        { onClick: this.handleClick },
         this.state.counter
       );
     }
